@@ -8,7 +8,9 @@ const app = express();
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.json())
 app.use('/api/genres',genres)
-
+router.get('/',(req,res)=>{
+      res.send("Hello This Is My First Vidlly App On Amazon Server...")
+})
 const port = process.env.PORT || process.env.PORT_NUMBER;
 
 app.listen(port,()=>{

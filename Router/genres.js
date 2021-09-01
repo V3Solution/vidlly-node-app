@@ -22,7 +22,7 @@ const genres = [
     genres.push(genre);
     res.send(genre);
   });
-  
+
   router.put('/:id', (req, res) => {
     const genre = genres.find(c => c.id === parseInt(req.params.id));
     if (!genre) return res.status(404).send('The genre with the given ID was not found.');
